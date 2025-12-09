@@ -1,0 +1,5 @@
+{
+  "name": "MilkyWay Tracker",
+  "description": "A minimalist, beautiful grocery tracker specifically for milk purchases. Track daily consumption, calculate costs, mark payments, and get AI-powered spending insights.",
+  "requestFramePermissions": []
+}
