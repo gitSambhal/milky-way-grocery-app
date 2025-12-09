@@ -484,7 +484,7 @@ const App: React.FC = () => {
                             type="number" 
                             value={entryPrice} 
                             onChange={(e) => setEntryPrice(parseFloat(e.target.value))}
-                            className="w-16 py-1 text-right focus:outline-none text-slate-700 font-medium"
+                            className="w-16 py-1 text-right focus:outline-none text-slate-700 font-medium bg-white"
                         />
                         </div>
                     </div>
@@ -519,7 +519,7 @@ const App: React.FC = () => {
                     type="number" 
                     value={entryPayment}
                     onChange={(e) => setEntryPayment(e.target.value)}
-                    className="w-full pl-8 pr-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none text-lg font-semibold text-slate-800"
+                    className="w-full pl-8 pr-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none text-lg font-semibold text-slate-800 bg-white"
                     placeholder="0"
                  />
                  <div className="absolute right-3">
@@ -582,22 +582,22 @@ const App: React.FC = () => {
                 <div className="grid grid-cols-2 gap-4">
                     <div>
                         <label className="block text-xs font-medium text-slate-500 mb-1">From Date</label>
-                        <input type="date" value={bulkStartDate} onChange={(e) => setBulkStartDate(e.target.value)} className="w-full p-2 border border-slate-200 rounded-lg text-sm" />
+                        <input type="date" value={bulkStartDate} onChange={(e) => setBulkStartDate(e.target.value)} className="w-full p-2 border border-slate-200 rounded-lg text-sm bg-white text-slate-800" />
                     </div>
                     <div>
                         <label className="block text-xs font-medium text-slate-500 mb-1">To Date</label>
-                        <input type="date" value={bulkEndDate} onChange={(e) => setBulkEndDate(e.target.value)} className="w-full p-2 border border-slate-200 rounded-lg text-sm" />
+                        <input type="date" value={bulkEndDate} onChange={(e) => setBulkEndDate(e.target.value)} className="w-full p-2 border border-slate-200 rounded-lg text-sm bg-white text-slate-800" />
                     </div>
                 </div>
                 
                 <div className="grid grid-cols-2 gap-4">
                     <div>
                         <label className="block text-xs font-medium text-slate-500 mb-1">Quantity ({settings.unitLabel})</label>
-                        <input type="number" value={bulkQty} onChange={(e) => setBulkQty(e.target.value)} className="w-full p-2 border border-slate-200 rounded-lg text-sm" />
+                        <input type="number" value={bulkQty} onChange={(e) => setBulkQty(e.target.value)} className="w-full p-2 border border-slate-200 rounded-lg text-sm bg-white text-slate-800" />
                     </div>
                     <div>
                         <label className="block text-xs font-medium text-slate-500 mb-1">Price / Unit</label>
-                        <input type="number" value={bulkPrice} onChange={(e) => setBulkPrice(parseFloat(e.target.value))} className="w-full p-2 border border-slate-200 rounded-lg text-sm" />
+                        <input type="number" value={bulkPrice} onChange={(e) => setBulkPrice(parseFloat(e.target.value))} className="w-full p-2 border border-slate-200 rounded-lg text-sm bg-white text-slate-800" />
                     </div>
                 </div>
 
@@ -628,11 +628,11 @@ const App: React.FC = () => {
                     <div className="grid grid-cols-2 gap-4 mb-4">
                         <div>
                             <label className="block text-xs font-medium text-slate-500 mb-1">From Date</label>
-                            <input type="date" value={bulkStartDate} onChange={(e) => setBulkStartDate(e.target.value)} className="w-full p-2 border border-slate-200 rounded-lg text-sm" />
+                            <input type="date" value={bulkStartDate} onChange={(e) => setBulkStartDate(e.target.value)} className="w-full p-2 border border-slate-200 rounded-lg text-sm bg-white text-slate-800" />
                         </div>
                         <div>
                             <label className="block text-xs font-medium text-slate-500 mb-1">To Date</label>
-                            <input type="date" value={bulkEndDate} onChange={(e) => setBulkEndDate(e.target.value)} className="w-full p-2 border border-slate-200 rounded-lg text-sm" />
+                            <input type="date" value={bulkEndDate} onChange={(e) => setBulkEndDate(e.target.value)} className="w-full p-2 border border-slate-200 rounded-lg text-sm bg-white text-slate-800" />
                         </div>
                     </div>
                     <Button onClick={handleBulkPay} className="w-full bg-emerald-600 hover:bg-emerald-700">Mark Range as Paid</Button>
@@ -667,15 +667,15 @@ const App: React.FC = () => {
          }} className="space-y-4">
             <div>
                <label className="block text-sm font-medium text-slate-700 mb-1">Currency Symbol</label>
-               <input name="currencySymbol" defaultValue={settings.currencySymbol} className="w-full p-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" />
+               <input name="currencySymbol" defaultValue={settings.currencySymbol} className="w-full p-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-white text-slate-800" />
             </div>
             <div>
                <label className="block text-sm font-medium text-slate-700 mb-1">Unit Label (e.g. L, gal)</label>
-               <input name="unitLabel" defaultValue={settings.unitLabel} className="w-full p-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" />
+               <input name="unitLabel" defaultValue={settings.unitLabel} className="w-full p-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-white text-slate-800" />
             </div>
             <div>
                <label className="block text-sm font-medium text-slate-700 mb-1">Default Price Per Unit</label>
-               <input name="defaultPrice" type="number" step="0.01" defaultValue={settings.defaultPrice} className="w-full p-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" />
+               <input name="defaultPrice" type="number" step="0.01" defaultValue={settings.defaultPrice} className="w-full p-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-white text-slate-800" />
             </div>
             <div className="pt-4 flex justify-end">
                <Button type="submit">Save Changes</Button>
